@@ -1,0 +1,9 @@
+local:
+  git_path: /opt/projects/project_name
+  bin_path: /opt/projects/project_name/bin
+staging:
+  address: 127.0.0.00
+  root_path: /home/project_name/staging
+  magento_path: /home/project_name/staging/src/magento
+  bin_path: /home/project_name/staging/bin
+  scripts_path: /home/project_name/staging/src/scripts

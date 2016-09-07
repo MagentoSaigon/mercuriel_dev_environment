@@ -1,0 +1,23 @@
+services:
+  web_server:
+    ports:
+     - "8080:80"
+    volumes:
+     - ../src:/var/www/src
+     - ../bin:/var/www/bin
+     - ../credentials:/var/www/credentials
+    links:
+     - db_server
+    container_name: web_server
+    build:
+      context: ./apache
+    environment:
+        XDEBUG_CONFIG: remote_host=10.0.75.1
+        PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/www/bin
+  db_server:
+    ports:
+     - "3306:3306"
+    container_name: db_server
+    image: mariadb
+    environment:
+        MYSQL_ALLOW_EMPTY_PASSWORD: "yes"

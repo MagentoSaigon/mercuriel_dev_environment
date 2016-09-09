@@ -13,6 +13,6 @@
   ],
   "extra":{
     "magento-root-dir": "../src/magento/",
-    "auto-append-gitignore": true,
+    "auto-append-gitignore": true
   }
 }
